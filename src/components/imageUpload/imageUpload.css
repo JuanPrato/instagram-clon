@@ -1,0 +1,23 @@
+.imageUpload {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.imageUpload__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageUpload__form > * {
+    margin-bottom: 20px;
+}
+
+.imageUpload__button {
+    width: 100%;
+}
+
+.form__progress {
+    width: 100%;
+    margin: 10px auto 10px;
+}

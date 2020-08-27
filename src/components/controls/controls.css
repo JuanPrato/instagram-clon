@@ -1,0 +1,22 @@
+.controls {
+    position: sticky;
+    bottom: 0%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 30px;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.controls__item {
+    width: 50%;
+    border-right: 1px solid lightgray!important;
+    border-radius: 0!important;
+}
+
+.controls__item:last-of-type {
+    border:none;
+}

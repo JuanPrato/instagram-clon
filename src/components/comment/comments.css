@@ -1,0 +1,46 @@
+.comments {
+    padding: 5px 5px 0 5px;
+}
+
+.text__comment {
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.text__comment > strong {
+    font-weight: 600;
+}
+
+.comments__form {
+    display: flex;
+    min-height: 35px;
+}
+
+.form__input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+
+.form__button {
+    flex: 0;
+    border: none;
+    border-top: 1px solid lightgray;
+    background: white;
+    color: #6082a3;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment__delete{
+    background: none;
+    border: none;
+    outline: none;
+    color: lightgray;
+}

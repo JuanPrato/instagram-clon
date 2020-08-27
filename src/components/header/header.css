@@ -1,0 +1,29 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header__logo {
+    object-fit: contain;
+    max-width: 125px;
+}
+
+.button__text {
+    font-weight: 700;
+}
+
+.header__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__form > * {
+    margin-bottom: 20px;
+}
