@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# instagram-clon
+Clon de instagram utilizando React y Firebase
+Se puede crear un cuenta, postear  y comentar un foto.
+>>>>>>> 6ed6f252caf56025979a596bc778d7a6a5a0fd79
