@@ -74,7 +74,8 @@ function ImageUpload({ username, email }) {
                             username: username
                         });
                         db.collection('users').doc(email).collection('imgs').add({
-                            url:url
+                            url:url,
+                            timestamp: firebase.firestore.FieldValue.serverTimestamp()
                         });
                     })
 

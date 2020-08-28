@@ -11,7 +11,7 @@ function Post({ postId, username, caption, imgUrl, user}) {
                 <Avatar
                     className="header__avatar"
                     alt={username}
-                    src='./assets/imgs/perfil.svg'   
+                    src = ''
                 />
 
                 <h2 className = 'header__username'>{username}</h2>

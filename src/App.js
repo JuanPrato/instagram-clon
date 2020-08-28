@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Header from './components/header/Header';
-import Main from './components/main/Main';
-import ImageUpload from './components/imageUpload/ImageUpload'
+
 import { db, auth } from './assets/static/firebase';
+
+import Header from './components/header/Header';
+import ImageUpload from './components/imageUpload/ImageUpload'
+
+import Main from './pages/main/Main';
+import Perfil from './pages/perfil/Perfil';
+
 import Controls from './components/controls/Controls';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 
 function App() {
 
@@ -63,7 +71,13 @@ function App() {
 
     auth
       .signInWithEmailAndPassword(email, password)
-      .catch(error => alert(error.message))
+      .catch(error => alert(error.message));
+
+    db.collection('users').doc(email).collection('data').add({
+      profile_image: '',
+      followers: 0,
+      follows: 0
+    });
   }
 
   return (
@@ -86,16 +100,28 @@ function App() {
       {user?.displayName ? (
         <ImageUpload username={user.displayName} email={user.email}/>
       ) : (
-        <h4>Logueate Capo</h4>
+        <h4 style = {{textAlign : 'center', margin : '20px 0'}}>Para subir fotos inicia sesion</h4>
       )}
 
-      <Main
-        posts = {posts}
-        user = {user}
-      />
-
-      {/* Controls */}
-      <Controls/>
+      
+      <Router>
+        <Switch>
+          <Route exact path = '/'>
+            <Main
+              posts = {posts}
+              user = {user}
+            />
+          </Route>
+          <Route path = '/perfil'>
+            <Perfil
+              user = {user}
+            />
+          </Route>
+        </Switch>
+        {/* Controls */}
+        <Controls/>
+      
+      </Router>
     </div>
   );
 }

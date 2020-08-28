@@ -1,6 +1,6 @@
-import React from 'react'
-import Post from '../post/Post'
-import './main.css'
+import React from 'react';
+import Post from '../../components/post/Post';
+import './main.css';
 
 function Main({ posts, user }) {
 
@@ -13,7 +13,7 @@ function Main({ posts, user }) {
                 <Post 
                     key = {id}
                     postId = {id}
-                    username = {post.username} 
+                    username = {post.username}
                     caption = {post.caption} 
                     imgUrl = {post.imgUrl}
                     user = {user}
